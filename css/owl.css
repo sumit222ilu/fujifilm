@@ -1,0 +1,187 @@
+.carousel-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-wrap .owl-carousel-page2 {
+  width: 60% !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-wrap .owl-carousel-page2 {
+    width: 100% !important;
+  }
+}
+
+.carousel-wrap .item {
+  position: relative;
+  z-index: 100;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.carousel-wrap .navWrapper {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carousel-wrap .navWrapper .navInner {
+  position: relative;
+  padding: 35px 0;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 4px 1px #ccc;
+          box-shadow: 0 0 4px 1px #ccc;
+}
+
+.carousel-wrap .navWrapper .navInner .owl-nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  top: 0;
+  padding: 10px 0;
+  color: var(--color-scorpion);
+}
+
+.carousel-wrap .navWrapper .navInner .owl-nav .owl-prev.disabled,
+.carousel-wrap .navWrapper .navInner .owl-nav .owl-next.disabled {
+  opacity: 0.3;
+}
+
+.carousel-wrap .navWrapper .navInner .owl-dots {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel-wrap .navWrapper .navInner .owl-dots .owl-dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--color-wedgeWood);
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.carousel-wrap .navWrapper .navInner .owl-dots .owl-dot.active {
+  background: var(--color-wedgeWood);
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap {
+  padding-top: 80px;
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper {
+  bottom: auto;
+  width: auto;
+  top: -60px;
+  right: 0;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-gap: 20px;
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper:before {
+  content: '';
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 1px;
+  background: var(--color-white);
+  opacity: 0.4;
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .headingText {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  color: var(--color-white);
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .navInner {
+  width: auto;
+  height: 40px;
+  padding: 0 35px;
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .navInner .owl-nav {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0 15px;
+  width: 100%;
+  height: 20px;
+  bottom: 0;
+  margin: auto;
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .navInner .owl-nav .owl-prev,
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .navInner .owl-nav .owl-next {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.carousel-wrap.hasNavOnTop.carousel-wrap .navWrapper .navInner .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop {
+  width: 100%;
+  overflow: hidden;
+}
+
+.owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop .owl-carousel {
+  width: calc(100% - 0);
+}
+
+.owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop .owl-carousel .navWrapper {
+  width: calc(100% + 0);
+  left: 0;
+}
+
+.owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop .owl-carousel .owl-stage-outer {
+  overflow: unset;
+}
+
+@media screen and (min-width: 1024px) {
+  .owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop .owl-carousel {
+    width: calc(100% - 175px);
+  }
+  .owl-carousel-almostFullWidth.carousel-wrap.hasNavOnTop .owl-carousel .navWrapper {
+    width: calc(100% + 275px);
+  }
+}
+/*# sourceMappingURL=owl.css.map */

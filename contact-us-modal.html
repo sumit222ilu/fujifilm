@@ -1,0 +1,156 @@
+<script src="country-code.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<div class="form-section-flex">
+  <div class="title">
+    <span>Request a demo,</span>
+    <span>contact our products</span>
+    <span>specialist</span>
+  </div>
+  <div class="formWrapper">
+    <form onsubmit="sendEmail(this, event)">
+      <div class="inputWrap">
+        <label>Name</label>
+        <input type="text" name="name" />
+        <div id="error-name" class="error">Please enter name</div>
+      </div>
+      <div class="inputWrap">
+        <label>E-mail</label>
+        <input type="email" name="email" />
+        <div id="error-email" class="error">Please enter valid email</div>
+      </div>
+      <div class="inputWrap">
+        <label>Contact Number</label>
+        <div class="countryInput">
+          <div class="selectWrap">
+            <div id="selectSelection" class="selectSelection">+93</div>
+            <select id="phoneCountry" name="countryCode"></select>
+          </div>
+          <input type="number" placeholder="Number" name="number" />
+        </div>
+        <div id="error-number" class="error">Please enter number</div>
+      </div>
+      <div class="inputWrap">
+        <label>Product</label>
+        <div class="selectWrap">
+          <select name="product">
+            <option value="FCT Speedia">FCT Speedia</option>
+            <option value="FCT Speedia HD">FCT Speedia HD</option>
+            <option value="Scenaria View">Scenaria View</option>
+            <option value="FCT PixelShine">FCT PixelShine</option>
+            <option value="AIRIS Vento Plus">AIRIS Vento Plus</option>
+            <option value="ECHELON Plus">ECHELON Plus</option>
+            <option value="Oasis">Oasis</option>
+            <option value="APERTO Lucent Plus">APERTO Lucent Plus</option>
+            <option value="Synapse 3D">Synapse 3D</option>
+          </select>
+        </div>
+      </div>
+      <div class="inputWrap">
+        <label>Occupation</label>
+        <input type="text" name="occupation" />
+      </div>
+
+      <button class="btn" name="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function (e) {
+    $.getJSON("country-code.json", function (obj) {
+      $.each(obj, function (indx, value) {
+        $("#phoneCountry").append(
+          `<option ${indx === 0 ? "selected" : ""} value="${
+            value.dial_code
+          }"">${value.name}</option>`
+        );
+      });
+    });
+  });
+
+  $("#phoneCountry").change(function () {
+    getValue();
+  });
+
+  function getValue() {
+    const phoneCountryEl = document.getElementById("phoneCountry");
+    const countryCode = phoneCountryEl.value;
+    $("#selectSelection").text(countryCode);
+  }
+
+  function getFormData(formElement) {
+    const formData = $(formElement).serializeArray();
+
+    let finalData = {};
+
+    formData.forEach((value, indx) => {
+      finalData[value.name] = value.value;
+    });
+
+    return finalData;
+  }
+
+  function sendEmail(formElement, event) {
+    event.preventDefault();
+    const formData = getFormData(formElement);
+    const { name, email, countryCode, number, product, occupation } = formData;
+
+    if (!validateForm(formData)) return;
+
+    Email.send({
+      // Host: "smtp.elasticemail.com",
+      // Username: "sumit.barthwal23@gmail.com",
+      // Password: "9657CB8FC3530EFA87B673DBA2E5893CCA58",
+      SecureToken: "ecd35b49-d9ab-4a4c-8753-27fd23f354de",
+      To: "iamsmpthapliyal@gmail.com, sumit.barthwal23@gmail.com",
+      From: "sumit.barthwal23@gmail.com",
+      Subject: "This is the subject",
+      Body: `
+        <div><strong>name:</strong> ${name}</div>
+        <div><strong>email:</strong> ${email}</div>
+        <div><strong>phone:</strong> ${countryCode} ${number}</div>
+        <div><strong>product:</strong> ${product}</div>
+        <div><strong>occupation:</strong> ${occupation}</div>
+      `,
+    }).then((message) => alert('mail sent successfully'));
+  }
+
+  function validateForm(formData) {
+    const { name, email, number } = formData;
+    let isFormValid = true;
+
+    Array.from(document.querySelectorAll('.error')).forEach((el) => el.classList.remove('show'));
+
+    if (isEmpty(name)) {
+      isFormValid = false;
+      document.getElementById("error-name").classList.add("show");
+    }
+
+    if (!isValidEmail(email)) {
+      isFormValid = false;
+      document.getElementById("error-email").classList.add("show");
+    }
+
+    if (isEmpty(number)) {
+      isFormValid = false;
+      document.getElementById("error-number").classList.add("show");
+    }
+
+    return isFormValid;
+  }
+
+  const isValidEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+  const isEmpty = (str) => {
+    return str.toString().trim() === '';
+  };
+</script>
+
+<!-- 9657CB8FC3530EFA87B673DBA2E5893CCA58 -->

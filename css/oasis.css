@@ -1,0 +1,442 @@
+.banner .container {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../images/oasis/mri-oasismri-oasis-banner.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/oasis/mri-oasismri-oasis-banner.jpg);
+  background-size: cover;
+  height: 270px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner .container .textWrapper {
+  max-width: 320px;
+}
+
+.banner .container .textWrapper h2 {
+  color: var(--color-wedgeWood);
+}
+
+.banner .container .textWrapper p {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .banner .container {
+    background-image: url(../images/oasis/mri-oasismri-oasis-banner.jpg);
+    height: 600px;
+    padding: 0 125px;
+  }
+}
+
+.findCT .container {
+  background-color: var(--color-wedgeWood);
+  padding: 40px 20px;
+}
+
+.findCT .container .textWrapper {
+  width: 100%;
+  color: var(--color-white);
+  padding-right: 30px;
+}
+
+.findCT .container .textWrapper p {
+  margin-top: 30px;
+}
+
+.findCT .container .img {
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .findCT .container {
+    height: 600px;
+    padding: 30px 30px 30px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .findCT .container .textWrapper {
+    max-width: 480px;
+  }
+  .findCT .container .img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.topBenefits {
+  margin-top: 30px;
+}
+
+.topBenefits .container {
+  background-color: var(--color-mystic);
+  padding: 40px 20px;
+}
+
+.topBenefits .container .topWrapper .img {
+  display: none;
+}
+
+.topBenefits .container .topWrapper .benefits {
+  color: var(--color-white);
+}
+
+.topBenefits .container .topWrapper .benefits .mainHeading {
+  color: var(--color-wedgeWood);
+  padding-left: 30px;
+}
+
+.topBenefits .container .topWrapper .benefits .hexagonWrapper {
+  margin-top: 50px;
+}
+
+.topBenefits .container .owl-carousel-almostFullWidth {
+  margin-top: 20px;
+}
+
+.topBenefits .container .owl-carousel-almostFullWidth .headingText {
+  color: var(--color-wedgeWood) !important;
+}
+
+@media screen and (min-width: 1024px) {
+  .topBenefits .container {
+    padding: 30px 20px 30px 20px;
+  }
+  .topBenefits .container .topWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .topBenefits .container .topWrapper .img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .topBenefits .container .topWrapper .benefits {
+    -ms-flex-item-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-self: stretch;
+    width: 670px;
+  }
+}
+
+.uniqueVisualization {
+  margin-top: 30px;
+}
+
+.uniqueVisualization .container {
+  background-color: var(--color-mystic);
+  padding: 40px 20px 30px 20px;
+}
+
+.uniqueVisualization .container h2 {
+  font-size: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+  margin-bottom: 30px;
+  color: var(--color-wedgeWood);
+}
+
+.uniqueVisualization .container h2 span {
+  color: #000;
+}
+
+.uniqueVisualization .container h2 div {
+  max-width: 650px;
+}
+
+.uniqueVisualization .hexWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.uniqueVisualization .hexWrapper li {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.uniqueVisualization .hexWrapper li .hexagonImg {
+  width: 115px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.uniqueVisualization .hexWrapper li .textWrapper h5 {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+
+.uniqueVisualization .hexWrapper li .textWrapper div p {
+  margin-bottom: 5px;
+}
+
+.uniqueVisualization .hexWrapper .bg-oncology,
+.uniqueVisualization .hexWrapper .bg-pulmonology,
+.uniqueVisualization .hexWrapper .bg-urology,
+.uniqueVisualization .hexWrapper .bg-gastroenterology,
+.uniqueVisualization .hexWrapper .bg-cardiology,
+.uniqueVisualization .hexWrapper .bg-neurology {
+  background-image: url("../images/css_sprites.png");
+}
+
+.uniqueVisualization .hexWrapper .bg-oncology {
+  background-position: -10px -10px;
+}
+
+.uniqueVisualization .hexWrapper .bg-pulmonology {
+  background-position: -146px -10px;
+}
+
+.uniqueVisualization .hexWrapper .bg-urology {
+  background-position: -10px -130px;
+}
+
+.uniqueVisualization .hexWrapper .bg-gastroenterology {
+  background-position: -146px -130px;
+}
+
+.uniqueVisualization .hexWrapper .bg-cardiology {
+  background-position: -282px -10px;
+}
+
+.uniqueVisualization .hexWrapper .bg-neurology {
+  background-position: -282px -130px;
+}
+
+@media screen and (min-width: 1024px) {
+  .uniqueVisualization .container h2 {
+    font-size: 40px;
+  }
+  .uniqueVisualization .hexWrapper li {
+    padding: 40px 20px;
+    width: 33.33%;
+  }
+}
+
+.requestDemo .container {
+  padding: 40px 20px;
+  background-color: var(--color-wedgeWood);
+}
+
+.requestDemo .container .textWrapper {
+  color: var(--color-white);
+  font-size: 32px;
+}
+
+.requestDemo .container form {
+  margin-top: 20px;
+  background-color: var(--color-mystic);
+  padding: 20px;
+}
+
+.requestDemo .container form .inputsWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.requestDemo .container form .inputsWrapper .input {
+  width: 100%;
+  padding: 10px;
+}
+
+.requestDemo .container form .inputsWrapper .input label {
+  margin-bottom: 4px;
+  display: block;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.requestDemo .container form .inputsWrapper .input input {
+  width: 100%;
+  height: 35px;
+}
+
+.requestDemo .container form .btnWrapper {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.requestDemo .container form .btnWrapper .btn {
+  width: calc(50% - 10px);
+}
+
+@media screen and (min-width: 1024px) {
+  .requestDemo .container {
+    padding: 50px 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    grid-gap: 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .requestDemo .container .textWrapper {
+    font-size: 40px;
+    width: 400px;
+  }
+  .requestDemo .container form {
+    margin-top: auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 30px 50px;
+  }
+  .requestDemo .container form .inputsWrapper .input {
+    width: 50%;
+  }
+}
+
+.download {
+  margin-top: 30px;
+}
+
+.download .container {
+  padding: 40px 20px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url(../images/oasis/mri-oasismri-oasis-download.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/oasis/mri-oasismri-oasis-download.jpg);
+  background-size: cover;
+}
+
+.download .container .textWrapper h2 {
+  font-size: 28px;
+  color: var(--color-wedgeWood);
+}
+
+.download .container .textWrapper .btn {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  margin-top: 20px;
+  min-width: 150px;
+  padding: 0.75rem;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  .download .container {
+    padding: 50px;
+    background-image: url(../images/oasis/mri-oasismri-oasis-download.jpg);
+  }
+  .download .container .textWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    grid-gap: 30px;
+  }
+  .download .container .textWrapper h2 {
+    font-size: 35px;
+  }
+  .download .container .textWrapper .btn {
+    margin-top: auto;
+  }
+}
+
+.similarProducts {
+  margin-top: 30px;
+}
+
+.similarProducts .container {
+  background-color: var(--color-wedgeWood);
+}
+
+.similarProducts .container .textWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.similarProducts .container .textWrapper .img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 400px;
+}
+
+.similarProducts .container .textWrapper .img img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.similarProducts .container .textWrapper .text {
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+  color: var(--color-white);
+}
+
+.similarProducts .container .textWrapper .text h3 {
+  font-size: 45px;
+  font-weight: 300;
+}
+
+.similarProducts .container .textWrapper .text h3 strong {
+  font-weight: 500;
+}
+
+.similarProducts .container .carousel-wrap {
+  padding: 100px 20px 40px 20px;
+  background-color: var(--color-nepal);
+}
+
+@media screen and (min-width: 1024px) {
+  .similarProducts .container .carousel-wrap {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 40px;
+  }
+}
+/*# sourceMappingURL=oasis.css.map */

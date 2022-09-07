@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fujifilm</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/page2.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+            carousel({
+                element: ".owl-carousel-almostFullWidth .owl-carousel",
+            });
+            carousel({
+                element: ".owl-carousel-products",
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    }
+                },
+            });
+            $('#hamburger').click(function() {
+                $(this).toggleClass('active');
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo"><img src="./images/logo.png" alt="Fujifilm" /></div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            <ul class="links">
+                <li><a href="#">MRI Solutions</a></li>
+                <li><a href="#">CT Solutions</a></li>
+                <li><a href="#">Advanced Visualaization</a></li>
+                <li class="buttonForDesktopOnly"> <a class="btn" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a> </li>
+            </ul>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="textWrapper">
+                <h2 class="fw-medium">FCT Speedia</h2>
+                <p class="fs-large">
+                    Open Access and Compact Design, with the latest technologies. The New “Speedia” CT meets your future needs.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="findCT">
+        <div class="container">
+            <div class="textWrapper">
+                <h2 class="fw-normal">
+                    Find a CT <span class="fw-light">that meets your ideals.</span>
+                </h2>
+                <p class="fs-large">
+                    At the front-line of medical practice the need for faster and more accurate diagnosis is increasing every day. The Speedia is designed to provide the answer. Its compact size, powerfulapplications, and optimized workflow provides the solution to multiple
+                    routine examinations without compromise. Speedia is your answer to join the next clinical and technology standard.
+                </p>
+            </div>
+            <div class="img">
+                <img class="cover" src="./images/man_in_ct.jpg" />
+            </div>
+        </div>
+    </section>
+    <section class="topBenefits">
+        <div class="container">
+            <div class="topWrapper">
+                <div class="img">
+                    <img class="cover" src="./images/top_benefits.jpg" />
+                </div>
+                <div class="benefits">
+                    <h2 class="mainHeading fw-light">Top Benefits</h2>
+                    <div class="hexagonWrapper has_4_elements">
+                        <div class="hexagon">
+                            <p class="text">easy operation</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">high performance</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">easy operation</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">high performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-wrap owl-carousel-almostFullWidth hasNavOnTop">
+                <h4 class="headingText fw-medium">Gallery</h4>
+                <div class="owl-carousel owl-carousel-page2">
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="images/machine_with_operator.png">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="images/three_doctors.png">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="topBenefits">
+        <div class="container">
+            <div class="topWrapper">
+                <div class="img">
+                    <img class="cover" src="./images/top_benefits.jpg" />
+                </div>
+                <div class="benefits">
+                    <h2 class="mainHeading fw-light">Top Benefits</h2>
+                    <div class="hexagonWrapper has_5_elements">
+                        <div class="hexagon">
+                            <p class="text">easy operation</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">high performance</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">easy operation</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">high performance</p>
+                        </div>
+                        <div class="hexagon">
+                            <p class="text">high performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-wrap owl-carousel-almostFullWidth hasNavOnTop">
+                <h4 class="headingText fw-medium">Gallery</h4>
+                <div class="owl-carousel owl-carousel-page2">
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard page2-productCard">
+                            <div class="content page2-content">
+                                <div class="img page2">
+                                    <img src="">
+                                </div>
+                                <div class="text">
+                                    <h4>Open and Compact</h4>
+                                    <small>Designed to allow patients to have exams comfortably</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <!-- <button class="btn secondary">Learn more</button>
+                                <button class="btn secondary">Request Callback</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="uniqueVisualization">
+        <div class="container">
+            <h2>
+                <div class="fw-medium">
+                    Unique visualization
+                    <span class="fw-light">needs with relevant applications</span>
+                </div>
+            </h2>
+            <ul class="hexWrapper">
+                <li>
+                    <div class="hexagonImg bg-pulmonology"></div>
+                    <div class="textWrapper">
+                        <h5>Pulmonology</h5>
+                        <div>
+                            <p>Lung Analysis Airway</p>
+                            <p>Lung Analysis Resection</p>
+                            <p>Lung Analysis Scope</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hexagonImg bg-gastroenterology"></div>
+                    <div class="textWrapper">
+                        <h5>Gastroenterology</h5>
+                        <div>
+                            <p>Colon Analysis</p>
+                            <p>Liver Analysis CT</p>
+                            <p>Liver Analysis MR</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hexagonImg bg-urology"></div>
+                    <div class="textWrapper">
+                        <h5>Urology</h5>
+                        <div>
+                            <p>Lung Analysis Airway</p>
+                            <p>Lung Analysis Resection</p>
+                            <p>Lung Analysis Scope</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hexagonImg bg-oncology"></div>
+                    <div class="textWrapper">
+                        <h5>Oncology</h5>
+                        <div>
+                            <p>Lung Analysis Airway</p>
+                            <p>Lung Analysis Resection</p>
+                            <p>Lung Analysis Scope</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hexagonImg bg-neurology"></div>
+                    <div class="textWrapper">
+                        <h5>Neurology</h5>
+                        <div>
+                            <p>Lung Analysis Airway</p>
+                            <p>Lung Analysis Resection</p>
+                            <p>Lung Analysis Scope</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="hexagonImg bg-cardiology"></div>
+                    <div class="textWrapper">
+                        <h5>Cardiology</h5>
+                        <div>
+                            <p>Lung Analysis Airway</p>
+                            <p>Lung Analysis Resection</p>
+                            <p>Lung Analysis Scope</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="requestDemo">
+        <div class="container">
+            <div class="textWrapper">
+                <h2 class="fw-normal">
+                    Request a demo,
+                    <span class="fw-light">Contact our products specialist</span>
+                </h2>
+            </div>
+            <form>
+                <div class="inputsWrapper">
+                    <div class="input">
+                        <label>Name</label>
+                        <input type="text" />
+                    </div>
+                    <div class="input">
+                        <label>Contact number</label>
+                        <input type="text" />
+                    </div>
+                    <div class="input">
+                        <label>E-mail</label>
+                        <input type="text" />
+                    </div>
+                    <div class="input">
+                        <label>Occupation</label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="btnWrapper">
+                    <button class="btn" type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="download">
+        <div class="container">
+            <div class="textWrapper">
+                <h2 class="fw-light">
+                    Download the <span class="fw-normal">FCT Speedia brochure</span>
+                </h2>
+                <button class="btn round">Download <span>↓</span></button>
+            </div>
+        </div>
+    </section>
+    <section class="similarProducts">
+        <div class="container">
+            <div class="carousel-wrap hasNavOnTop">
+                <h4 class="headingText"><strong>Similar</strong> Product</h4>
+                <div class="owl-carousel owl-carousel-products">
+                    <div class="item">
+                        <div class="productCard">
+                            <div class="content">
+                                <div class="light-background"></div>
+                                <div class="img"></div>
+                                <div class="text">
+                                    <h5 class="fw-medium">
+                                        ECHELON Smart Plus with REALISE Plus
+                                    </h5>
+                                    <small>1.5T MRI Scanner</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <a href=""> <button class="btn secondary">Learn more</button></a>
+                                <a href=""> <button class="btn secondary">Request Callback</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard">
+                            <div class="content">
+                                <div class="light-background"></div>
+                                <div class="img"></div>
+                                <div class="text">
+                                    <h5 class="fw-medium">
+                                        ECHELON Smart Plus with REALISE Plus
+                                    </h5>
+                                    <small>1.5T MRI Scanner</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <a href=""> <button class="btn secondary">Learn more</button></a>
+                                <a href=""> <button class="btn secondary">Request Callback</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard">
+                            <div class="content">
+                                <div class="light-background"></div>
+                                <div class="img"></div>
+                                <div class="text">
+                                    <h5 class="fw-medium">
+                                        ECHELON Smart Plus with REALISE Plus
+                                    </h5>
+                                    <small>1.5T MRI Scanner</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <a href=""> <button class="btn secondary">Learn more</button></a>
+                                <a href=""> <button class="btn secondary">Request Callback</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="productCard">
+                            <div class="content">
+                                <div class="light-background"></div>
+
+                                <div class="img"></div>
+                                <div class="text">
+                                    <h5 class="fw-medium">
+                                        ECHELON Smart Plus with REALISE Plus
+                                    </h5>
+                                    <small>1.5T MRI Scanner</small>
+                                </div>
+                            </div>
+                            <div class="ctaWrapper">
+                                <a href=""> <button class="btn secondary">Learn more</button></a>
+                                <a href=""> <button class="btn secondary">Request Callback</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footerTop">
+                <ul class="socialMedia">
+                    <li><a href="#">in</a></li>
+                    <li><a href="#">fa</a></li>
+                </ul>
+                <div class="newsLetter">
+                    <h4>Subscribe to our newsletter</h4>
+                    <div class="inputWrap">
+                        <input placeholder="E-mail address" type="text" />
+                        <button class="btn secondary round small">submit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <ul class="links">
+                    <li><a href="#">Privacy Disclaimer</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Terms & Conditionst</a></li>
+                    <li><a href="#">Copyright</a></li>
+                </ul>
+                <div class="copyText">&#169; 2022 FUJIFILM Eastern Africa</div>
+            </div>
+        </div>
+    </footer>
+
+    <a class="btn buttonForMobileOnly" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="./css/modal.min.css" />
+<link rel="stylesheet" href="./css/contact-us-modal.min.css" />
+
+</html>

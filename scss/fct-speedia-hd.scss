@@ -1,0 +1,398 @@
+.banner {
+  .container {
+    background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(../images/fct-speedia-hd/ct-Speedia_hdct-speedia-hd-banner.jpg);
+    background-size: cover;
+    height: 270px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    .textWrapper {
+      max-width: 320px;
+      h2 {
+        color: var(--color-wedgeWood);
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      background-image: url(../images/fct-speedia-hd/ct-Speedia_hdct-speedia-hd-banner.jpg);
+      height: 600px;
+      padding: 0 125px;
+    }
+  }
+}
+
+.findCT {
+  .container {
+    background-color: var(--color-wedgeWood);
+    padding: 40px 20px;
+    
+    .textWrapper {
+      width: 100%;
+      color: var(--color-white);
+      padding-right: 30px;
+      p {
+        margin-top: 30px;
+      }
+    }
+
+    .img{
+      display: none;
+    }    
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      height: 600px;
+      padding: 30px 30px 30px 50px;
+      display: flex;
+      align-items: center;
+
+      .textWrapper{
+        max-width: 480px;
+      }
+
+      .img {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    }
+  }
+}
+
+.topBenefits {
+  margin-top: 30px;
+  .container {
+    background-color: var(--color-mystic);
+    padding: 40px 20px;
+
+    .topWrapper {
+      
+      .img{
+        display: none;
+      }
+
+      .benefits {
+        color: var(--color-white);
+
+        .mainHeading {
+          color: var(--color-wedgeWood);
+          padding-left: 30px;
+        }
+
+        .hexagonWrapper {
+          margin-top: 50px;
+        }
+      }
+    }
+
+    .owl-carousel-almostFullWidth {
+      margin-top: 20px;
+
+      .headingText {
+        color: var(--color-wedgeWood) !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container{
+      padding: 30px 20px 30px 20px;
+
+      .topWrapper {
+        display: flex;
+        align-items: center;
+
+        .img {
+          display: flex;
+          height: 100%;
+          flex: 1;
+        }
+        .benefits {
+          align-self: stretch;
+          width: 670px;
+        }
+      }
+    }
+  }
+}
+
+.uniqueVisualization {
+  margin-top: 30px;
+  .container {
+    background-color: var(--color-mystic);
+    padding: 40px 20px 30px 20px;
+    h2 {
+      font-size: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid;
+      margin-bottom: 30px;
+      color: var(--color-wedgeWood);
+
+      span {
+        color: #000;
+      }
+
+      div {
+        max-width: 650px;
+      }
+    }
+  }
+
+  .hexWrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+      display: flex;
+      padding: 20px;
+
+      .hexagonImg {
+        width: 115px;
+        height: 100px;
+        margin-right: 20px;
+      }
+
+      .textWrapper h5 {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 7px;
+      }
+      
+      .textWrapper div p {
+        margin-bottom: 5px;
+      }
+    }
+
+    .bg-oncology,
+    .bg-pulmonology,
+    .bg-urology,
+    .bg-gastroenterology,
+    .bg-cardiology,
+    .bg-neurology {
+      background-image: url("../images/css_sprites.png");
+    }
+    .bg-oncology {
+      background-position: -10px -10px;
+    }
+    .bg-pulmonology {
+      background-position: -146px -10px;
+    }
+    .bg-urology {
+      background-position: -10px -130px;
+    }
+    .bg-gastroenterology {
+      background-position: -146px -130px;
+    }
+    .bg-cardiology {
+      background-position: -282px -10px;
+    }
+    .bg-neurology {
+      background-position: -282px -130px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container{
+      h2{
+        font-size: 40px;
+      }
+    }
+    .hexWrapper{
+      li {
+        padding: 40px 20px;
+        width: 33.33%;
+      }
+    }
+  }
+}
+
+.requestDemo {
+  .container {
+    padding: 40px 20px;
+    background-color: var(--color-wedgeWood);
+
+    .textWrapper {
+      color: var(--color-white);
+      font-size: 32px;
+    }
+
+    form {
+      margin-top: 20px;
+      background-color: var(--color-mystic);
+      padding: 20px;
+
+      .inputsWrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .input {
+          width: 100%;
+          padding: 10px;
+
+          label {
+            margin-bottom: 4px;
+            display: block;
+            font-weight: normal;
+            font-size: 16px;
+          }
+
+          input {
+            width: 100%;
+            height: 35px;
+          }
+        }
+      }
+
+      .btnWrapper {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+
+        .btn {
+          width: calc(50% - 10px);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container{
+      padding: 50px 30px;
+      display: flex;
+      grid-gap: 30px;
+      align-items: center;
+
+      .textWrapper {
+        font-size: 40px;
+        width: 400px;
+      }
+
+      form{
+        margin-top: auto;
+        flex: 1;
+        padding: 30px 50px;
+
+        .inputsWrapper {
+          .input {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.download {
+  margin-top: 30px;
+  .container {
+    padding: 40px 20px;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/fct-speedia-hd/ct-speedia-hdct-speedia-hd-download.jpg);
+    background-size: cover;
+
+    .textWrapper {
+
+      h2 {
+        font-size: 28px;
+        color: var(--color-wedgeWood);
+      }
+
+      .btn {
+        background-color: var(--color-black);
+        color: var(--color-white);
+        margin-top: 20px;
+        min-width: 150px;
+        padding: 0.75rem;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      padding: 50px;
+      background-image:url(../images/fct-speedia-hd/ct-speedia-hdct-speedia-hd-download.jpg);
+
+      .textWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        grid-gap: 30px;
+
+        h2 {
+          font-size: 35px;
+        }
+
+        .btn{
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
+
+.similarProducts {
+  margin-top: 30px;
+  .container {
+    background-color: var(--color-wedgeWood);
+
+    .textWrapper {
+      display: flex;
+      .img {
+        flex: 1;
+        height: 400px;
+
+        img {
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        font-size: 18px;
+        color: var(--color-white);
+
+        h3 {
+          font-size: 45px;
+          font-weight: 300;
+
+          strong {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .carousel-wrap {
+      padding: 100px 20px 40px 20px;
+      background-color: var(--color-nepal);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container{
+
+      .carousel-wrap {
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 40px;
+      }
+
+    }
+  }
+}

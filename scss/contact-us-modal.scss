@@ -1,0 +1,101 @@
+/*# sourceMappingURL=reset-copy.css.map */
+
+// form {
+.form-section-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    background-image: linear-gradient(to right, var(--color-nepal), var(--color-wedgeWood));
+    .title {
+        color: var(--color-white);
+        padding-left: 0;
+        text-align: center;
+        margin: 20px 0;
+        span {
+            font-size: 24px;
+            font-weight: 200;
+            &:first-child {
+                font-weight: 300;
+            }
+        }
+    }
+    .formWrapper {
+        width: 100%;
+        max-width: 530px;
+        padding: 15px;
+        height: auto;
+        background-color: var(--color-wedgeWood);
+        form {
+            padding-top: 17px;
+            .inputWrap {
+                margin-bottom: 22px;
+                color: var(--color-white);
+                position: relative;
+                label {
+                    display: block;
+                    font-weight: 300;
+                    margin-bottom: 5px;
+                }
+                input,
+                select {
+                    width: 100%;
+                    height: 40px;
+                    background-color: var(--color-white);
+                    color: var(--color-black);
+                    border: none;
+                    box-shadow: none;
+                    padding: 10px;
+                    outline: none;
+                    &::-ms-expand {
+                        display: none;
+                    }
+                    &:focus:invalid {
+                        border-color: #fd6347;
+                    }
+                    &:required:valid {
+                        border-color: #006400;
+                    }
+                }
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                .error{
+                    position: absolute;
+                    bottom: 0;
+                    transform: translateY(100%);
+                }
+            }
+            .btn {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .form-section-flex {
+        .title {
+            padding-left: 20px;
+            text-align: left;
+            margin: auto;
+            span {
+                font-size: 38px;
+                display: block;
+            }
+        }
+        .formWrapper {
+            padding: 10px 50px 30px 30px;
+        }
+    }
+}
+
+// }
+
+#phoneCountry{
+    opacity: 0.01;
+}
