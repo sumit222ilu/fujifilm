@@ -46,15 +46,14 @@
                 <span></span><span></span><span></span>
             </div>
             <ul class="links">
-                <li><a href="#">MRI Solutions</a></li>
-                <li><a href="#">CT Solutions</a></li>
-                <li><a href="#">Advanced Visualaization</a></li>
+                <li><a href="index.html?scrollTo=mriSolutions">MRI Solutions</a></li>
+                <li><a href="index.html?scrollTo=ctSolutions">CT Solutions</a></li>
+                <li><a href="index.html?scrollTo=advancedVisualization">Advanced Visualaization</a></li>
                 <li class="buttonForDesktopOnly">
-                    <a class="btn" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a
-            >
-          </li>
-        </ul>
-      </div>
+                  <a class="btn" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <section class="banner">
       <div class="container">
@@ -404,23 +403,37 @@
             <span class="fw-light">Contact our products specialist</span>
           </h2>
         </div>
-        <form>
+        <form onsubmit="sendEmailViaPageForm(this, event)">
           <div class="inputsWrapper">
-            <div class="input">
+            <div class="inputWrap">
               <label>Name</label>
-              <input type="text" />
+              <input type="text" name="name" />
+              <div id="error-name" class="error">Please enter name</div>
             </div>
-            <div class="input">
-              <label>Contact number</label>
-              <input type="text" />
-            </div>
-            <div class="input">
+            <div class="inputWrap">
               <label>E-mail</label>
-              <input type="text" />
+              <input type="email" name="email" />
+              <div id="error-email" class="error">Please enter valid email</div>
             </div>
-            <div class="input">
+            <div class="inputWrap">
+              <label>Company Name</label>
+              <input type="text" name="company" />
+              <div id="error-company" class="error">Please company name</div>
+            </div>
+            <div class="inputWrap">
+              <label>Contact Number</label>
+              <div class="countryInput">
+                <div class="selectWrap">
+                  <div id="phoneCountryInPage_selection" class="selectSelection">+93</div>
+                  <select id="phoneCountryInPage" name="countryCode"></select>
+                </div>
+                <input type="number" placeholder="Number" name="number" />
+              </div>
+              <div id="error-number" class="error">Please enter number</div>
+            </div>
+            <div class="inputWrap">
               <label>Occupation</label>
-              <input type="text" />
+              <input type="text" name="occupation" />
             </div>
           </div>
           <div class="btnWrapper">
@@ -435,9 +448,7 @@
           <h2 class="fw-light">
             Download the <span class="fw-normal">FCT Speedia brochure</span>
           </h2>
-          <a class="btn round" href="contact-us-modal.html" rel="modal:open"
-            >Download <span>↓</span></a
-          >
+          <a class="btn round" href="contact-us-modal-for-download.html" rel="modal:open">Download <span>↓</span></a>
         </div>
       </div>
     </section>
@@ -573,4 +584,98 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
   <link rel="stylesheet" href="./css/modal.min.css" />
   <link rel="stylesheet" href="./css/contact-us-modal.min.css" />
+  <script src="./js/util_contryCode.js"></script>
+  <script>
+    $(document).ready(function (e) {
+      getCountryCodeDropDown('phoneCountryInPage')
+    });
+
+    function sendEmailViaPageForm(formElement, event) {
+      event.preventDefault();
+   
+      function getFormData() {
+        const formData = $(formElement).serializeArray();
+
+        let finalData = {};
+
+        formData.forEach((value, indx) => {
+          finalData[value.name] = value.value;
+        });
+
+        return finalData;
+      }
+
+      function validateForm() {
+        const { name, email, number, company } = getFormData();
+        let isFormValid = true;
+
+        console.log( formElement.querySelector("[name=name]"))
+
+        Array.from(formElement.querySelectorAll(".error")).forEach((el) =>
+          el.classList.remove("show")
+        );
+
+        if (isEmpty(name)) {
+          isFormValid = false;
+          const elem = $(formElement.querySelector("[name=name]"));
+          elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        }
+
+        if (isEmpty(company)) {
+          isFormValid = false;
+          const elem = $(formElement.querySelector("[name=company]"));
+          elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        }
+
+        if (!isValidEmail(email)) {
+          isFormValid = false;
+          const elem = $(formElement.querySelector("[name=email]"));
+          elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        }
+
+        if (isEmpty(number)) {
+          isFormValid = false;
+          const elem = $(formElement.querySelector("[name=number]"));
+          elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        }
+
+        return isFormValid;
+      }
+
+      const isValidEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+
+      const isEmpty = (str) => {
+        return str.toString().trim() === "";
+      };
+
+      if (!validateForm()) return;
+
+      const { name, email, company, countryCode, number, product, occupation } = getFormData();
+
+      Email.send({
+        // Host: "smtp.elasticemail.com",
+        // Username: "sumit.barthwal23@gmail.com",
+        // Password: "9657CB8FC3530EFA87B673DBA2E5893CCA58",
+        SecureToken: "ecd35b49-d9ab-4a4c-8753-27fd23f354de",
+        To: "iamsmpthapliyal@gmail.com, sumit.barthwal23@gmail.com",
+        From: "sumit.barthwal23@gmail.com",
+        Subject: "This is the subject",
+        Body: `
+        <div><strong>name:</strong> ${name}</div>
+        <div><strong>email:</strong> ${email}</div>
+        <div><strong>company:</strong> ${company}</div>
+        <div><strong>phone:</strong> ${countryCode} ${number}</div>
+        <div><strong>product:</strong> Fct Speedia</div>
+      `,
+      }).then((message) => {
+        alert("mail sent successfully");
+      });
+    }
+  </script>
 </html>

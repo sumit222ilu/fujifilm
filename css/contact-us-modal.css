@@ -52,13 +52,14 @@
 .form-section-flex .formWrapper form .inputWrap label {
   display: block;
   font-weight: 300;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
+  font-size: 12px;
 }
 
 .form-section-flex .formWrapper form .inputWrap input,
 .form-section-flex .formWrapper form .inputWrap select {
   width: 100%;
-  height: 40px;
+  height: 35px;
   background-color: var(--color-white);
   color: var(--color-black);
   border: none;
@@ -93,6 +94,13 @@
   bottom: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  display: none;
+  font-size: 11px;
+  color: var(--color-mystic);
+}
+
+.form-section-flex .formWrapper form .inputWrap .error.show {
+  display: block;
 }
 
 .form-section-flex .formWrapper form .btn {

@@ -6,6 +6,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 0 20px;
 }
 
 header .container {
@@ -656,7 +657,7 @@ img.cover {
 
 .selectWrap:after {
   content: "▼";
-  padding-top: 5px;
+  padding-top: 1px;
   font-size: 10px;
   position: absolute;
   right: 0;
@@ -674,6 +675,7 @@ img.cover {
       -ms-flex-pack: center;
           justify-content: center;
   pointer-events: none;
+  color: black;
 }
 
 .selectWrap select {
@@ -697,8 +699,9 @@ img.cover {
 
 .countryInput .selectWrap .selectSelection {
   width: 100%;
-  height: 40px;
+  height: 35px;
   background-color: var(--color-white);
+  color: var(--color-black);
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -710,7 +713,8 @@ img.cover {
   position: absolute;
   pointer-events: none;
   padding-left: 20px;
-  padding-top: 12px;
+  font-size: 12px;
+  padding-top: 10px;
 }
 
 .countryInput input {

@@ -15,10 +15,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/owl.carousel.min.js"></script>
     <script src="./js/carousel.js"></script>
+    <script src="./js/util.js"></script>
     <script>
         $(document).ready(function() {
             carousel({
                 element: ".owl-carousel-banner",
+                nav: false
             });
             carousel({
                 element: ".owl-carousel-products",
@@ -34,6 +36,8 @@
             $('#hamburger').click(function() {
                 $(this).toggleClass('active');
             });
+
+            scrollToViaQueryParam();
         });
     </script>
 </head>
@@ -44,10 +48,12 @@
             <div class="logo"><img src="./images/logo.png" alt="Fujifilm" /></div>
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
             <ul class="links">
-                <li><a href="#">MRI Solutions</a></li>
-                <li><a href="#">CT Solutions</a></li>
-                <li><a href="#">Advanced Visualization</a></li>
-                <li class="buttonForDesktopOnly"> <a class="btn" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a> </li>
+                <li><a href="index.html?scrollTo=mriSolutions">MRI Solutions</a></li>
+                <li><a href="index.html?scrollTo=ctSolutions">CT Solutions</a></li>
+                <li><a href="index.html?scrollTo=advancedVisualization">Advanced Visualaization</a></li>
+                <li class="buttonForDesktopOnly">
+                  <a class="btn" href="contact-us-modal.html" rel="modal:open">Contact our Product Specialist</a>
+                </li>
             </ul>
         </div>
     </header>
@@ -67,14 +73,12 @@
                             </p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="ctSolutions">
+    <section class="ctSolutions" id="ctSolutions">
         <div class="container">
             <div class="textWrapper">
                 <div class="img">
@@ -172,7 +176,7 @@
         </div>
     </section>
 
-    <section class="mriSolutions">
+    <section class="mriSolutions" id="mriSolutions">
         <div class="container">
             <div class="textWrapper">
                 <div class="text">
@@ -271,7 +275,7 @@
         </div>
     </section>
 
-    <section class="advancedVisualization">
+    <section class="advancedVisualization" id="advancedVisualization">
         <div class="container">
             <div class="img">
                 <img class="cover" src="./images/doctors_with_skeleton.jpg" />
@@ -336,5 +340,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="./css/modal.min.css" />
 <link rel="stylesheet" href="./css/contact-us-modal.min.css" />
-
 </html>

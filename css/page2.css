@@ -184,6 +184,8 @@
   width: 115px;
   height: 100px;
   margin-right: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .uniqueVisualization .hexWrapper li .textWrapper h5 {
@@ -261,38 +263,74 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.requestDemo .container form .inputsWrapper .input {
-  width: 100%;
-  padding: 10px;
+.requestDemo .container form .inputsWrapper .inputWrap {
+  margin-bottom: 22px;
+  color: var(--color-black);
+  position: relative;
+  width: calc(50% - 0.5rem);
 }
 
-.requestDemo .container form .inputsWrapper .input label {
-  margin-bottom: 4px;
+.requestDemo .container form .inputsWrapper .inputWrap .error {
+  color: var(--color-black) !important;
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap label {
   display: block;
-  font-weight: normal;
-  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 2px;
+  font-size: 12px;
 }
 
-.requestDemo .container form .inputsWrapper .input input {
+.requestDemo .container form .inputsWrapper .inputWrap input,
+.requestDemo .container form .inputsWrapper .inputWrap select {
   width: 100%;
   height: 35px;
-}
-
-.requestDemo .container form .btnWrapper {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: 10px;
+  outline: none;
 }
 
-.requestDemo .container form .btnWrapper .btn {
-  width: calc(50% - 10px);
+.requestDemo .container form .inputsWrapper .inputWrap input::-ms-expand,
+.requestDemo .container form .inputsWrapper .inputWrap select::-ms-expand {
+  display: none;
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap input:focus:invalid,
+.requestDemo .container form .inputsWrapper .inputWrap select:focus:invalid {
+  border-color: #fd6347;
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap input:required:valid,
+.requestDemo .container form .inputsWrapper .inputWrap select:required:valid {
+  border-color: #006400;
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap .error {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  display: none;
+  font-size: 11px;
+  color: var(--color-mystic);
+}
+
+.requestDemo .container form .inputsWrapper .inputWrap .error.show {
+  display: block;
 }
 
 @media screen and (min-width: 1024px) {
@@ -345,6 +383,7 @@
   min-width: 150px;
   padding: 0.75rem;
   font-size: 16px;
+  text-align: center;
 }
 
 @media screen and (min-width: 1024px) {

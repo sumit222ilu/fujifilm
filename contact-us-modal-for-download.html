@@ -1,5 +1,5 @@
+<script src="country-code.js"></script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="./js/util_contryCode.js"></script>
 
 <div class="form-section-flex">
   <div class="title">
@@ -8,7 +8,7 @@
     <span>specialist</span>
   </div>
   <div class="formWrapper">
-    <form onsubmit="sendEmailViaHeaderBtn(this, event)">
+    <form onsubmit="sendEmailViaDownloadBtn(this, event)">
       <div class="inputWrap">
         <label>Name</label>
         <input type="text" name="name" />
@@ -20,42 +20,18 @@
         <div id="error-email" class="error">Please enter valid email</div>
       </div>
       <div class="inputWrap">
-        <label>Company Name</label>
-        <input type="text" name="company" />
-        <div id="error-company" class="error">Please company name</div>
-      </div>
-      <div class="inputWrap">
         <label>Contact Number</label>
         <div class="countryInput">
           <div class="selectWrap">
-            <div id="phoneCountry_selection" class="selectSelection">+93</div>
-            <select id="phoneCountry" name="countryCode"></select>
+            <div id="phoneCountryDownload_selection" class="selectSelection">
+              +93
+            </div>
+            <select id="phoneCountryDownload" name="countryCode"></select>
           </div>
           <input type="number" placeholder="Number" name="number" />
         </div>
         <div id="error-number" class="error">Please enter number</div>
       </div>
-      <div class="inputWrap">
-        <label>Product</label>
-        <div class="selectWrap">
-          <select name="product">
-            <option value="FCT Speedia">FCT Speedia</option>
-            <option value="FCT Speedia HD">FCT Speedia HD</option>
-            <option value="Scenaria View">Scenaria View</option>
-            <option value="FCT PixelShine">FCT PixelShine</option>
-            <option value="AIRIS Vento Plus">AIRIS Vento Plus</option>
-            <option value="ECHELON Plus">ECHELON Plus</option>
-            <option value="Oasis">Oasis</option>
-            <option value="APERTO Lucent Plus">APERTO Lucent Plus</option>
-            <option value="Synapse 3D">Synapse 3D</option>
-          </select>
-        </div>
-      </div>
-      <div class="inputWrap">
-        <label>Occupation</label>
-        <input type="text" name="occupation" />
-      </div>
-
       <button class="btn" name="submit">Submit</button>
     </form>
   </div>
@@ -63,12 +39,19 @@
 
 <script type="text/javascript">
   $(document).ready(function (e) {
-    getCountryCodeDropDown('phoneCountry')
+    getCountryCodeDropDown("phoneCountryDownload");
   });
 
-  function sendEmailViaHeaderBtn(formElement, event) {
+  function sendEmailViaDownloadBtn(formElement, event) {
     event.preventDefault();
-   
+
+    function openDocument() {
+      const basePath = "../pdfs/";
+      const docName = "ct_fct_pixelshine(eng)_brochure.pdf";
+      const url = `${basePath}${docName}`;
+      window.open(url, "_blank").focus();
+    }
+
     function getFormData() {
       const formData = $(formElement).serializeArray();
 
@@ -85,7 +68,7 @@
       const { name, email, number, company } = getFormData();
       let isFormValid = true;
 
-      console.log( formElement.querySelector("[name=name]"))
+      console.log(formElement.querySelector("[name=name]"));
 
       Array.from(formElement.querySelectorAll(".error")).forEach((el) =>
         el.classList.remove("show")
@@ -94,25 +77,19 @@
       if (isEmpty(name)) {
         isFormValid = false;
         const elem = $(formElement.querySelector("[name=name]"));
-        elem.parent().closest('.inputWrap').find('.error').addClass("show");
-      }
-
-      if (isEmpty(company)) {
-        isFormValid = false;
-        const elem = $(formElement.querySelector("[name=company]"));
-        elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        elem.parent().closest(".inputWrap").find(".error").addClass("show");
       }
 
       if (!isValidEmail(email)) {
         isFormValid = false;
         const elem = $(formElement.querySelector("[name=email]"));
-        elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        elem.parent().closest(".inputWrap").find(".error").addClass("show");
       }
 
       if (isEmpty(number)) {
         isFormValid = false;
         const elem = $(formElement.querySelector("[name=number]"));
-        elem.parent().closest('.inputWrap').find('.error').addClass("show");
+        elem.parent().closest(".inputWrap").find(".error").addClass("show");
       }
 
       return isFormValid;
@@ -132,7 +109,8 @@
 
     if (!validateForm()) return;
 
-    const { name, email, company, countryCode, number, product, occupation } = getFormData();
+    const { name, email, company, countryCode, number, product, occupation } =
+      getFormData();
 
     Email.send({
       // Host: "smtp.elasticemail.com",
@@ -143,15 +121,13 @@
       From: "sumit.barthwal23@gmail.com",
       Subject: "This is the subject",
       Body: `
-      <div><strong>name:</strong> ${name}</div>
-      <div><strong>email:</strong> ${email}</div>
-      <div><strong>company:</strong> ${company}</div>
-      <div><strong>phone:</strong> ${countryCode} ${number}</div>
-      <div><strong>product:</strong> ${product}</div>
-      <div><strong>occupation:</strong> ${occupation}</div>
-    `,
+                <div><strong>name:</strong> ${name}</div>
+                <div><strong>email:</strong> ${email}</div>
+                <div><strong>phone:</strong> ${countryCode} ${number}</div>
+                `,
     }).then((message) => {
       alert("mail sent successfully");
+      openDocument();
     });
   }
 </script>
